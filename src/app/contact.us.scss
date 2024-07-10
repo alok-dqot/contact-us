@@ -1,0 +1,106 @@
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    // background-color: #f9f9f9;
+}
+
+.contact-form-left,
+.contact-form-right {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    // margin: 10px;
+}
+
+.contact-form-left {
+    flex: 1;
+    z-index: 3;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    form {
+
+        input,
+        textarea {
+            width: 85%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+
+            font-family: var(--fnt-family);
+
+            &:focus-visible {
+                outline: none;
+                border: 1px solid #ddd !important;
+            }
+        }
+
+        button {
+            // width: fit-content;
+            // margin: auto;
+            background-color: var(--primary);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    // transform: translateX(-100px);
+    animation: slide 0.5s ease;
+    transition: 0.5s all ease;
+
+    @keyframes slide {
+        0% {
+            transform: translate(310px);
+        }
+
+        100% {
+            transform: translate(0px);
+        }
+    }
+}
+
+.contact-form-right {
+    flex: 1;
+    background-color: var(--primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    z-index: 5;
+
+    height: 450px;
+
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+
+
+        svg {
+            margin-right: 10px;
+            background-color: #ffffff47;
+            padding: 10px;
+            border-radius: 50%;
+            color: var(--main-color);
+            // color: black;
+        }
+    }
+}
